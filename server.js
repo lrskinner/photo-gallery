@@ -25,9 +25,9 @@ server.get('/contact', (req,res) => {
     res.render('contact')
 })
  
-server.get('/about', (req,res) => {
-   res.render('aboutusviewpage')
-})
+server.get('/gallery', (req,res) => {
+    res.render('gallery')
+ })
   
 
 
