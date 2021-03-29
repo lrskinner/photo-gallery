@@ -26,8 +26,10 @@ server.get('/contact', (req,res) => {
 })
  
 server.get('/gallery', (req,res) => {
-    res.render('gallery')
- })
+    fs.readFile('./data.json', 'utf-8', (err, data) => {
+        res.render('gallery', JSON.parse(data))
+    }) 
+})
   
 
 
