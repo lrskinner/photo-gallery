@@ -1,5 +1,9 @@
 <div>
-  <img src={{image}} alt={{name}}>
-  <div>Title: {{breed}}</div>
-  <div>Year: {{owner}}</div>
+  {{#each photos}}
+    <div>
+        <img src={{image}} alt={{name}}>
+        <div>Title: {{title}}</div>
+        <div>Year: {{year}}</div>
+    </div>
+  {{/each}}
 </div>
