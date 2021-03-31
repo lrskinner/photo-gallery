@@ -1,7 +1,8 @@
 <div class= "container inner">
   {{#each photos}}
       <img class= "images" src={{image}} alt={{name}}>
-    <h3>Title: {{title}}</h3> 
-    <h3>Year: {{year}}</h3> 
+      <h3 class="text">Title: {{title}}</h3> 
+      <h3 class="text">Year: {{year}}</h3>
+      <h3 class="text">Rating: {{>commentForm}}</h3>
   {{/each}}
 </div>
