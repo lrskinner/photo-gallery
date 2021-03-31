@@ -1,0 +1,73 @@
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.photosclass { 
+    height: 300px;
+    width: auto;
+}
+
+li {
+    display: inline;
+    justify-content: space-around;
+  }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+  }
+
+.nav {
+    list-style-type: none;
+    text-align: center;
+}
+
+/* unvisited link */ 
+ a:link { 
+    text-decoration: none;
+}
+  
+/* visited link */
+a:visited {
+    color: #D97B6A; 
+    text-decoration: none;
+}
+  
+/* mouse over link */
+a:hover {
+    color: #82A5D9; 
+    text-decoration: none;
+}
+  
+/* selected link */
+a:active {
+    color:white; 
+    text-decoration: none;
+}
+  
+
+
+.inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;   
+}
+
+.images {
+    height: 280px;
+    width: auto;   
+    margin-top: 8vh;
+    padding: 8vh;
+  }
