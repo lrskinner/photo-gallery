@@ -1,3 +1,22 @@
+/* CSS HEX */
+--green-yellow: #ccff66ff;
+--beau-blue: #bdd4e7ff;
+--space-cadet: #2d3142ff;
+--pumpkin: #fc7a1eff;
+
+.text {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.homeTitle {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+
+/* .homeBackground {
+    background-image: url(./Images/dcplants.JPG);
+} */
+
 .photos {
     display: flex;
     flex-wrap: wrap;
@@ -25,29 +44,35 @@ ul {
 .nav {
     list-style-type: none;
     text-align: center;
+    background-color: #bdd4e7ff;
 }
 
 /* unvisited link */ 
  a:link { 
+    color: #fc7a1eff;
     text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
 }
   
 /* visited link */
 a:visited {
     color: #D97B6A; 
     text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
 }
   
 /* mouse over link */
 a:hover {
     color: #82A5D9; 
     text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
 }
   
 /* selected link */
 a:active {
     color:white; 
     text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
 }
   
 
