@@ -31,7 +31,11 @@ server.get('/gallery', (req,res) => {
     }) 
 })
   
-
+server.get('/gallery', (req, res) => {
+    fs.writeFile('./data.json', 'utf-8', (err, data) => {
+        
+    })
+})
 
 //add a server.post route that points to a form (create form page- to comment on a photo?)
 //fs.writeFile to put that info into a file
