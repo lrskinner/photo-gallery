@@ -16,7 +16,7 @@ server.engine('hbs', hbs({ extname: 'hbs' }))
 server.set('view engine', 'hbs')
 
 
-//This is rendering home.hbs
+//This is displaying home.hbs
 server.get('/', (req,res) => {
   res.render('home')
 })
