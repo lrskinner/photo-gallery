@@ -16,7 +16,7 @@ server.engine('hbs', hbs({ extname: 'hbs' }))
 server.set('view engine', 'hbs')
 
 
-//This is rendering our home.hbs
+//This is rendering home.hbs
 server.get('/', (req,res) => {
   res.render('home')
 })
@@ -33,7 +33,8 @@ server.get('/gallery', (req,res) => {
   
 
 
-  
+//add a server.post route that points to a form (create form page- to comment on a photo?)
+//fs.writeFile to put that info into a file
 
 
 
