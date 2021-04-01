@@ -48,6 +48,13 @@ ul {
     background-color: #bdd4e7ff;
 }
 
+.button {
+    border-radius: 5px;
+    background-color: #bdd4e7ff;
+    border-color: #bdd4e7ff;
+}
+
+
 /* unvisited link */ 
  a:link { 
     color: #fc7a1eff;
