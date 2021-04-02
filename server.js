@@ -31,14 +31,32 @@ server.get('/gallery', (req,res) => {
     }) 
 })
   
-server.get('/gallery', (req, res) => {
-    fs.writeFile('./data.json', 'utf-8', (err, data) => {
-
-    })
+server.get('/gallery/:id', (req, res) => {
+    fs.readFile('./data.json', 'utf-8', (err, data) => {
+        res.render('gallery', JSON.parse(data))
+    }) 
 })
 
-server.post('', () => {
-    
+server.post('/gallery/:id', (req, res) => {
+    // get id from request params
+    const id = Number(req.params.id)
+
+    // retrieve gallery object from database
+    fs.readFile('./data.json', 'utf-8', (err,data) => {
+        if (err) return res.status(500).send(err.message)
+        const galleryObjects = JSON.parse(data)
+        const selected = galleryObjects.photos.find(photo => photo.id === id)
+        // add rating to gallery object
+        selected.ratings.push(req.body.rating)
+        
+        // save back to database
+        fs.writeFile('./data.json', JSON.stringify(galleryObjects), function (err) {
+            if (err) return res.status(500).send(err.message)
+            return res.redirect('/gallery')
+            
+        })
+    })
+    // redirect back to gallery
 })
 
 //add a server.post route that points to a form (create form page- to comment on a photo?)
