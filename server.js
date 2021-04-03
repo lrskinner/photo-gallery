@@ -47,13 +47,15 @@ server.post('/gallery/:id', (req, res) => {
         const galleryObjects = JSON.parse(data)
         const selected = galleryObjects.photos.find(photo => photo.id === id)
         // add rating to gallery object
-        selected.ratings.push(req.body.rating)
+        //selected.push(req.body.rating)
+
+        if (req.body.rating === "like") selected.likes++
+        else if (req.body.rating === "dislike") selected.dislikes++
         
         // save back to database
         fs.writeFile('./data.json', JSON.stringify(galleryObjects), function (err) {
             if (err) return res.status(500).send(err.message)
             return res.redirect('/gallery')
-            
         })
     })
     // redirect back to gallery
