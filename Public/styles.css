@@ -5,6 +5,10 @@
 --pumpkin: #fc7a1eff;
 */
 
+.wrapper {
+  background-color: #bdd4e7ff;
+}
+
 .text {
     font-family: 'Quicksand', sans-serif;
 }
@@ -16,7 +20,23 @@
 
 .homeTitle {
     font-family: 'Quicksand', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.homeText {
+  font-family: 'Quicksand', sans-serif;
+  color: aliceblue;
+  text-align: center;
+}
+
+.homeImage {
+  height: 800px;
+  width: 1200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
