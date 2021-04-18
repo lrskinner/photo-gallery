@@ -1,10 +1,14 @@
 <div class="container inner">
   {{#each photos}}
+    <div>
       <img class= "images" src={{image}} alt={{name}}>
-      <h3 class="text">Title: {{title}}</h3> 
-      <h3 class="text">Year: {{year}}</h3>
-      <h3 class="text">Rating: {{>commentForm}}</h3>
-      <h3 class="text">Likes: {{likes}}</h3>
-      <h3 class="text">Dislikes: {{dislikes}}</h3>
+      <div>
+        <h3 class="titles">{{title}} ({{year}})</h3> 
+        <div class="ratings-section">
+          <h3 class="text">Likes {{likes}} | Dislikes {{dislikes}}</h3>
+          <h3 class="text">{{>commentForm}}</h3>
+        </div>
+      </div>
+    </div>
   {{/each}}
 </div>
