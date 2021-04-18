@@ -135,7 +135,7 @@ a:active {
   }
 
   
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1200px) {
     .container {
       width: 100%;
       margin: 5px;
@@ -145,7 +145,7 @@ a:active {
     }
   }
   
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 768px) {
     .container {
       width: 100%;
       margin: 5px;
@@ -155,7 +155,7 @@ a:active {
     }
   }
   
-  @media only screen and (max-width: 620px) {
+  @media only screen and (max-width: 320px) {
     .container {
       width: 100%;
       margin: 5px;
