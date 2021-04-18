@@ -46,26 +46,19 @@ server.post('/gallery/:id', (req, res) => {
         if (err) return res.status(500).send(err.message)
         const galleryObjects = JSON.parse(data)
         const selected = galleryObjects.photos.find(photo => photo.id === id)
-        // add rating to gallery object
-        //selected.push(req.body.rating)
 
+        // add rating to gallery object
         if (req.body.rating === "like") selected.likes++
         else if (req.body.rating === "dislike") selected.dislikes++
         
-        // save back to database
+        // save back to database and redirect back to gallery
         fs.writeFile('./data.json', JSON.stringify(galleryObjects), function (err) {
             if (err) return res.status(500).send(err.message)
             return res.redirect('/gallery')
         })
     })
-    // redirect back to gallery
+    
 })
-
-//add a server.post route that points to a form (create form page- to comment on a photo?)
-//fs.writeFile to put that info into a file
-
-
-
 
 
 module.exports = server
