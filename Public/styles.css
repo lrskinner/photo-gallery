@@ -5,6 +5,10 @@
 --pumpkin: #fc7a1eff;
 */
 
+body {
+  margin: 0;
+}
+
 .wrapper {
   background-color: #bdd4e7ff;
 }
@@ -23,12 +27,14 @@
     font-size: 25px;
     color: aliceblue;
     text-align: center;
+    margin-top: 0%;
 }
 
 .homeText {
   font-family: 'Quicksand', sans-serif;
   color: aliceblue;
   text-align: center;
+  margin-bottom: 0%;
 }
 
 .homeImage {
@@ -118,13 +124,13 @@ a:active {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;   
+    width: 100%;
 }
 
 .images {
-    height: 280px;
-    width: auto;   
+    height: auto;
+    width: 100%;   
     margin-top: 8vh;
-    padding: 8vh;
   }
 
   .ratings-section {
@@ -136,31 +142,19 @@ a:active {
 
   
   @media only screen and (max-width: 1200px) {
-    .container {
-      width: 100%;
-      margin: 5px;
-      flex-grow: 1;
-      flex-shrink: 1;
-      flex: 1 1 calc(33% - 10px);
+    .container > div {  
+      width: calc(33% - 20px) 
     }
   }
   
   @media only screen and (max-width: 768px) {
-    .container {
-      width: 100%;
-      margin: 5px;
-      flex-grow: 1;
-      flex-shrink: 1;
-      flex: 1 1 calc(50% - 10px);
-    }
+    .container > div {
+      width: calc(50% - 20px)
+     }
   }
   
   @media only screen and (max-width: 320px) {
-    .container {
-      width: 100%;
-      margin: 5px;
-      flex-grow: 1;
-      flex-shrink: 1;
-      flex: 1 1 calc(100% - 10px);
+    .container > div {
+      width: calc(100% - 20px)
     }
   }
